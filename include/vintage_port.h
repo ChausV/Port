@@ -1,3 +1,6 @@
+#ifndef VINTAGE_PORT_H
+#define VINTAGE_PORT_H
+
 class VintagePort : public Port { // style always == "vintage"
 private:
     char* nickname; // like "The Noble", "Old Velvet", etc.
@@ -12,3 +15,5 @@ public:
     void Show() const;
     friend std::ostream& operator<<(std::ostream& os, const VintagePort& vp);
 };
+
+#endif // VINTAGE_PORT_H

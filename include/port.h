@@ -1,3 +1,6 @@
+#ifndef PORT_H
+#define PORT_H
+
 #include <iostream>
 
 class Port {
@@ -19,3 +22,5 @@ public:
     virtual void Show() const;
     friend std::ostream& operator<< (std::ostream& os, const Port& p);
 };
+
+#endif // PORT_H
