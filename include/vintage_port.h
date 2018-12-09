@@ -12,7 +12,7 @@ public:
     ~VintagePort() { delete [] nickname; }
 
     VintagePort & operator=(const VintagePort & vp);
-    void Show() const;
+    void Show() const override;
     friend std::ostream& operator<<(std::ostream& os, const VintagePort& vp);
 };
 

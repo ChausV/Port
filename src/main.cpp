@@ -63,9 +63,38 @@ int main()
 	cout << "After: " << v1 << endl;
 	cout << endl;
 
-	cout << " --------------- Port copy constrtuctor --------------- " << endl;
+	cout << " ----------- VintagePort copy constrtuctor ----------- " << endl;
 	VintagePort v3(v2);
 	cout << v3 << endl << endl;
+	cout << endl;
+
+	cout << " =================== Overall tests =================== " << endl;
+	Port * port_port = new Port("Ramos Pinto", "tawny", 5);
+	Port * port_vport = new VintagePort("Sandeman", 6, "Noble", 2000);
+	VintagePort * vport_vport = new VintagePort("Smith Woodhouse", 7, "Old Velvet", 1985);
+
+	cout << "-----   " << *port_port << endl;
+	port_port->Show();
+	cout << "-----   " << *port_vport << endl;
+	port_vport->Show();
+	cout << "-----   " << *vport_vport << endl;
+	vport_vport->Show();
+	cout << endl;
+
+	cout << port_port->BottleCount();
+	*port_port += 10;
+	cout << " += 10 is " << port_port->BottleCount() << endl;
+	cout << port_vport->BottleCount();
+	*port_vport += 10;
+	cout << " += 10 is " << port_vport->BottleCount() << endl;
+	cout << vport_vport->BottleCount();
+	*vport_vport += 10;
+	cout << " += 10 is " << vport_vport->BottleCount() << endl;
+	cout << endl;
+
+	delete port_port;
+	delete port_vport;
+	delete vport_vport;
 
 	return 0;
 }

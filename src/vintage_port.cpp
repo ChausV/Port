@@ -18,7 +18,7 @@ VintagePort::VintagePort(const char* br, int b, const char* nn, int y) :
 }
 
 VintagePort::VintagePort(const VintagePort& vp) :
-						Port(static_cast<const Port &>(vp)), year(vp.year)
+					Port(static_cast<const Port &>(vp)), year(vp.year)
 {
 	nickname = new char[20];
 	strcpy(nickname, vp.nickname);
