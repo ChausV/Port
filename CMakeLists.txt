@@ -12,5 +12,5 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 add_executable(${EXECUTABLE_NAME}
 	${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/port.cpp
-#	${CMAKE_CURRENT_SOURCE_DIR}/src/vintage_port.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/vintage_port.cpp
 )

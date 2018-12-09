@@ -1,4 +1,5 @@
 #include "port.h"
+#include "vintage_port.h"
 
 #include <iostream>
 using std::cout;
@@ -44,6 +45,27 @@ int main()
 	cout << "-= 5: " << (p1 -= 5) << endl;
 	cout << "-= -20: " << (p1 -= -20) << endl;
 	cout << "Bottles after: " << p1.BottleCount() << endl;
+	cout << endl;
+
+	cout << " ---------- VintagePort default constrtuctor ---------- " << endl;
+	VintagePort v1;
+	v1.Show();
+	cout << v1 << endl << endl;
+
+	cout << " -------- VintagePort parametric constrtuctor -------- " << endl;
+	VintagePort v2("Taylor's", 10, "Late Bottled", 2012);
+	v2.Show();
+	cout << v2 << endl << endl;
+
+	cout << " ---------- VintagePort assignment operator ---------- " << endl;
+	cout << "Before: " << v1 << endl;
+	v1 = v2;
+	cout << "After: " << v1 << endl;
+	cout << endl;
+
+	cout << " --------------- Port copy constrtuctor --------------- " << endl;
+	VintagePort v3(v2);
+	cout << v3 << endl << endl;
 
 	return 0;
 }
